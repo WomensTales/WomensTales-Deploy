@@ -1,0 +1,84 @@
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import Tema from '../../../models/Tema';
+import './ListarTema.css';
+import useLocalStorage from 'react-use-localstorage';
+import { useHistory } from 'react-router-dom';
+import { busca } from '../../../services/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+
+function ListarTema() {
+	const [temas, setTemas] = useState<Tema[]>([])
+	const token = useSelector<TokenState, TokenState["tokens"]>(
+		(state) => state.tokens
+	  );
+	let history = useHistory();
+
+	useEffect(() => {
+		if (token == '') {
+			alert("Você precisa estar logado")
+			history.push("/login")
+		}
+	}, [token])
+
+
+	async function getTema() {
+		await busca("/temas", setTemas, {
+			headers: {
+				'Authorization': token
+			}
+		})
+	}
+
+
+	useEffect(() => {
+		getTema()
+	}, [temas.length])
+
+	return (
+		<>
+			{
+				temas.map(tema => (
+					<Box m={2}>
+						<Card variant="outlined">
+							<CardContent>
+								<Typography color="textSecondary" gutterBottom>
+									Tema
+								</Typography>
+								<Typography variant="h5" component="h2">
+									{tema.titulo}
+								</Typography>
+							</CardContent>
+							<CardActions>
+								<Box display="flex" justifyContent="center" mb={1.5} >
+
+									<Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
+										<Box mx={1}>
+											
+											<Button variant="contained" className="marginLeft botao" size='small'>
+												Editar
+											</Button>
+											
+										</Box>
+									</Link>
+									<Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
+										<Box mx={1}>
+											<Button variant="contained" size='small' className="botao2">
+												deletar
+											</Button>
+										</Box>
+									</Link>
+								</Box>
+							</CardActions>
+						</Card>
+						</Box>
+				))
+			}
+		</>
+	);
+}
+
+
+export default ListarTema;
