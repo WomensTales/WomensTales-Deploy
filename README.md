@@ -58,32 +58,32 @@
   <table align="center">
   <tr>
     <td align="center">
-    <img  src="https://i.imgur.com/D6O7fVJ.png" style="width: 100px; border-radius: 5%">
+    <img  src="https://avatars.githubusercontent.com/u/93778308?v=4" style="width: 100px; border-radius: 5%">
     <h4><b>Cristiane Damaceno</b></h4>
       <a href="https://www.linkedin.com/in/cristiane-damaceno/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
       <a href="https://github.com/cristianedamaceno" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"></a> 
     <td align="center">
-    <img  src="https://i.imgur.com/qyzAk2W.png" style="width: 100px; border-radius: 5%">
+    <img  src="https://avatars.githubusercontent.com/u/6810988?v=4" style="width: 100px; border-radius: 5%">
     <h4><b>Iara Lima</b></h4>
       <a href="https://www.linkedin.com/in/iara-dos-santos-949316193/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
       <a href="https://github.com/IaraLima"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"></a> 
     <td align="center">
-      <img  src="https://i.imgur.com/Hkge7qg.png" style="width: 100px; border-radius: 5%">
+      <img  src="https://avatars.githubusercontent.com/u/87741743?s=400&u=971cdb250c7de25b47ea10f9b033c9fd45aba521&v=4" style="width: 100px; border-radius: 5%">
     <h4><b>Erick Costa</b></h4>
      <a href="https://www.linkedin.com/in/erick-pereira-12aa971b0/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
       <a href="https://github.com/ErickPCosta" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"></a> 
     <td align="center">
-    <img  src="https://i.imgur.com/SPJr5de.png" style="width: 100px; border-radius: 5%">
+    <img  src="https://avatars.githubusercontent.com/u/93782827?v=4" style="width: 100px; border-radius: 5%">
        <h4><b>Jhonatan Siqueira</b></h4>
       <a href="https://www.linkedin.com/in/jhonatan-nunes-de-siqueira-ba8a19157/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
       <a href="https://github.com/jhonatannsiqueira" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"/></a> 
    <td align="center">
-    <img  src="https://i.imgur.com/TMcdAhw.png" style="width: 100px; border-radius: 5%">
+    <img  src="https://media-exp1.licdn.com/dms/image/C4D03AQGl9JEDDrStKQ/profile-displayphoto-shrink_800_800/0/1643827715543?e=1649289600&v=beta&t=-2E41v6u6s3PclAwhNR-19tXk7_qWerdtH4v-84rTrM" style="width: 100px; border-radius: 5%">
     <h4><b>Vitor Crivelaro</b></h4>
       <a href="https://www.linkedin.com/in/vitor-crivelaro-ab81bb91/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
       <a href="https://github.com/vcrivelaro" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"></a> 
      <td align="center">
-    <img  src="https://i.imgur.com/9stATil.png" style="width: 100px; border-radius: 5%">
+    <img  src="https://avatars.githubusercontent.com/u/94019341?v=4" style="width: 100px; border-radius: 5%">
     <h4><b>Marcelo Borges</b></h4>
       <a href="Linkedin.com/in/marcelo-b-571395185/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
       <a href="https://github.com/Marceloux" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"></a> 
