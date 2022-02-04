@@ -10,16 +10,16 @@ function Footer() {
             <Grid container direction="row" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", backgroundColor: "#C77185"}}>
                 <Box paddingLeft={7} className="box1">
                     <Box paddingTop={1}>
-                        <Typography variant="subtitle2" align="left" style={{ color: "white" }} >© 2022 Copyright: Women's Tales</Typography>
+                        <Typography variant="subtitle2" align="left" style={{ color: "white" }} ></Typography>
                     </Box>
                     <Box>
-                        <a target="_blank" className='text-decorator-none' href="https://brasil.generation.org">
-                            <Typography variant="subtitle2" style={{ color: "white" }} align="center">brasil.generation.org</Typography>
+                        <a target="_blank" className='text-decorator-none' href="https://womenstales.vercel.app/">
+                            <Typography variant="subtitle2" style={{ color: "white" }} align="center">© 2022 Copyright Women's Tales</Typography>
                         </a>
                     </Box>
                 </Box>
                 <Box paddingRight={8} display="flex" alignItems="center" justifyContent="center">
-                    <a href="https://github.com/cristianedamaceno/Women-s-Tales-Project" target="_blank">
+                    <a href="https://github.com/WomensTales/WomensTales-Deploy" target="_blank">
                         <GitHubIcon style={{ fontSize: 60, color: "white" }} />
                     </a>
                 </Box>

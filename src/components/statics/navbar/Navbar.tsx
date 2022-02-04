@@ -6,17 +6,17 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useDispatch } from "react-redux";
 import { addToken } from '../../../store/tokens/actions';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 
 function Navbar() {
 
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-      );
+    );
     let history = useHistory();
     const dispatch = useDispatch();
-    
-    function goLogout(){
+
+    function goLogout() {
         dispatch(addToken(''));
         toast.info('Usuário deslogado', {
             position: "top-right",
@@ -30,7 +30,7 @@ function Navbar() {
         });
         history.push('/login')
     }
-  
+
 
     return (
         <>
@@ -41,50 +41,49 @@ function Navbar() {
                             <img src='https://i.imgur.com/xALHdrz.png' alt="logo" className='size'></img>
                         </Link>
                     </Box>
-                    <Box display="flex" justifyContent="space-between">
+                    <Box width="100%" display="flex" justifyContent="space-between">
                         <Box>
                             <Box display="flex" justifyContent="start">
-                                <Link to={"/home"} className="text-decorator-none cursor">
+                                <Link to="/home" className="text-decorator-none cursor">
                                     <Box mx={1}>
                                         <Typography variant="h6" color="inherit">
-                                        Women's Tales
+                                            Women's Tales
                                         </Typography>
                                     </Box>
                                 </Link>
-                                <Link to={"/sobre-nos"} className="text-decorator-none cursor">
+                                <Link to="/sobre-nos" className="text-decorator-none cursor">
                                     <Box mx={1}>
                                         <Typography variant="h6" color="inherit">
                                             Sobre
                                         </Typography>
                                     </Box>
+
                                 </Link>
-                                <Link to={"/contato"} className="text-decorator-none cursor" >
+                                <Link to="/contato" className="text-decorator-none cursor">
                                     <Box mx={1}>
                                         <Typography variant="h6" color="inherit">
                                             Contato
                                         </Typography>
                                     </Box>
                                 </Link>
-                                <Link to={"/formularioTema"} className="text-decorator-none cursor">
+
+                                <Link to="/formularioTema" className="text-decorator-none cursor">
                                     <Box mx={1}>
                                         <Typography variant="h6" color="inherit">
                                             Temas
                                         </Typography>
                                     </Box>
                                 </Link>
+                            </Box>
+                        </Box>
 
-                                <Box mx={1} style={{ cursor: "pointer" }} onClick={goLogout}>
+                        <Box mx={1} style={{ cursor: "pointer" }} onClick={goLogout}>
                             <Typography variant="h6" color="inherit">
                                 Logout
                             </Typography>
                         </Box>
-
-                            </Box>
-
-
-                        </Box>
-                       
                     </Box>
+
                 </Toolbar>
             </AppBar>
         </>
