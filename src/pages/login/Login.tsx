@@ -72,7 +72,7 @@ function Login() {
             <Grid alignItems="center" xs={6}>
                 <Box paddingX={20}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center">Entrar</Typography>
+                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center"  className="fonteTitulo" >Entrar</Typography>
                         <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="usuario" label="Usuário" variant="outlined" name="usuario" margin="normal" fullWidth />
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="Senha" variant="outlined" name="senha" margin="normal" type="password" fullWidth />
                         <Box marginTop={2} textAlign="center">

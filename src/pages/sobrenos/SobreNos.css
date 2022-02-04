@@ -7,12 +7,28 @@
 }
 
 .box-fotos{
-    height: 350px !important;
-    width: 350px !important;
+
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
 }
 .icone{
     color: #c87286!important;
     font-size: 700 !important;
+}
+
+.img_sobre {
+    max-width:400px;
+    max-height:400px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: auto;
+    height: auto;
 }
 
 .box-icones{

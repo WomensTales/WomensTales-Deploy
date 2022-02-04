@@ -7,6 +7,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://i.imgur.com/VAs56ct.png');
+  background-color: #ECCDD4;
+  opacity: 0.8;
+  text-align: justify;
 }
 
 code {

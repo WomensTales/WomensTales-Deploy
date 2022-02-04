@@ -35,7 +35,7 @@ function Contato() {
                 <Grid item xs={6} alignItems="center">
                     <Box paddingX={10}>
                         <form onSubmit={sendEmail} id="form_contato">
-                            <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center">Contato</Typography>
+                            <Typography variant="h4" gutterBottom color="textPrimary" className="fonteTitulo" component="h3" align="center">Contato</Typography>
                             <TextField id="nome" label="Nome" variant="outlined" margin="normal" fullWidth {...register("nome", { required: true, maxLength: 30, minLength: 3 })} />
                             {errors.nome?.type === 'required' && <span className="msgError"> "O Nome é um atributo obrigatório!"</span>}
                             {errors.nome && errors.nome.type === "maxLength" && <span className="msgError">O tamanho para o nome foi excedido! Use no máximo 30 caracteres.</span>}
@@ -62,15 +62,23 @@ function Contato() {
                             {errors.mensagem && errors.mensagem.type === "minLength" && <span className="msgError">O tamanho para a mensagem está curto! Use mais de 3 caracteres.</span>}
 
                             <Box marginTop={2} textAlign="center">
+
+                                <Box  m={2}>
+                                <Button type="submit" variant="outlined" className="botao">
+                                    Enviar
+                                </Button>
+                                </Box>
+
+                                <Box m={2}>
                                 <Link to="/home" className="text-decorator-none">
                                     <Button variant="outlined" className="botao2">
                                         Cancelar
                                     </Button>
                                 </Link>
-
-                                <Button type="submit" variant="outlined" className="botao">
-                                    Enviar
-                                </Button>
+                                </Box>
+                            
+                               
+                                
                             </Box>
                         </form>
                     </Box>

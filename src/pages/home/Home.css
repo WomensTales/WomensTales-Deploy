@@ -15,11 +15,13 @@
     border-color: white !important;
     background-color: #472930 !important; 
     color: white !important;
+    margin: 20px 40px 80px 15px;
 }
 .botao2{
     border-color: white !important;
     background-color: white !important; 
     color: #472930 !important;
+    margin: 20px 40px 80px 15px;
 }
 .postagens {
     background-color: #C77185;

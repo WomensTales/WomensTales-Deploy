@@ -86,7 +86,7 @@ function CadastroTema() {
 
 			<Grid >
 				<form onSubmit={onSubmit}>
-					<Typography variant="h3" color="textSecondary" component="h1" align="center" >Novo tema</Typography>
+					<Typography variant="h3" color="textSecondary" component="h1" align="center" className="fonteTitulo" >Novo tema</Typography>
 					<TextField value={tema.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="titulo" label="Tema" variant="outlined" name="titulo" margin="normal" fullWidth />
 					<Button type="submit" variant="contained" className="botao">
 						Criar
@@ -94,7 +94,7 @@ function CadastroTema() {
 				</form>
 			</Grid>
 			<Grid>
-				<Typography variant="h3" color="textSecondary" component="h1" align="center" >Lista de Temas</Typography>
+				<Typography variant="h3" color="textSecondary" component="h1" align="center" className="fonteTitulo">Lista de Temas</Typography>
 				<Grid container xs={12} justifyContent='center' alignItems='center' >
 				<Box display="flex" flexWrap="wrap" justifyContent="center">
 						<ListarTemas />

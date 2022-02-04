@@ -109,7 +109,7 @@ function CadastroPostagem() {
 	return (
 		<Container maxWidth="sm" className="topo">
 			<form onSubmit={onSubmit}>
-				<Typography variant="h3" color="textSecondary" component="h1" align="center" >Crie uma Postagem</Typography>
+				<Typography variant="h3" color="textSecondary" className="fonteTitulo" component="h1" align="center" >Crie uma Postagem</Typography>
 				<TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="Título" variant="outlined" name="titulo" margin="normal" fullWidth />
 				<TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="Texto" name="texto" variant="outlined" margin="normal" fullWidth />
 
@@ -130,7 +130,7 @@ function CadastroPostagem() {
 						}
 					</Select>
 					<FormHelperText>Selecione o Tema da Postagem</FormHelperText>
-					<Button type="submit" variant="contained" color="primary">
+					<Button type="submit" variant="contained" className="botao">
 						Finalizar
 					</Button>
 				</FormControl>
