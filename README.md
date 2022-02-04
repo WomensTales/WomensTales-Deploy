@@ -1,46 +1,90 @@
-# Getting Started with Create React App
+<h1 align="center"> Women's Tales </h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ <p align="center">
+<img src="https://i.imgur.com/NDiYyCs.png" style="width: 65%;">
+</p>
 
-## Available Scripts
+## Tecnologias usadas
 
-In the project directory, you can run:
+<table align="center" style=" width: 60%" >
+  <tr>
+    <td align="center">
+    <img  src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/40/external-java-is-a-general-purpose-programming-language-that-is-class-based-logo-shadow-tal-revivo.png">
+    <td align="center">
+   <img  src="https://img.icons8.com/color/40/html-5--v1.png">
+   <td align="center">
+   <img  src="https://img.icons8.com/color/40/heroku.png">
+   <td align="center">
+     <img  src="https://img.icons8.com/color/40/mysql-logo.png">
+   <td align="center">
+   <img  src="https://img.icons8.com/ios-glyphs/40/github.png">
+   <td align="center">
+   <img  src="https://img.icons8.com/color/40/typescript.png">
+   <td align="center">
+   <img  src="https://pivotal.gallerycdn.vsassets.io/extensions/pivotal/vscode-boot-dev-pack/0.1.0/1629148309593/Microsoft.VisualStudio.Services.Icons.Default"style="width: 30px">
+   <td align="center">
+   <img  src="https://img.icons8.com/color/40/visual-studio-code-2019.png">
+   <td align="center">
+   <img  src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/40/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png">
+    <td align="center">
+     <img  src="https://img.icons8.com/color/40/figma--v1.png">
+   <td align="center">
+   <img  src="https://img.icons8.com/color/40/javascript--v1.png">
+   <td align="center">
+   <img  src="https://img.icons8.com/color/40/git.png">
+   <td align="center">
+   <img  src="https://img.icons8.com/color/40/cloud-function.png">
+   <td align="center">
+   <img  src="https://img.icons8.com/officexs/40/java-eclipse.png">
+   <td align="center">
+    <img  src="https://img.icons8.com/office/40/react.png">
+   
+     
+     
+  </tr>
+</table>
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
+  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+<br>
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Time de desenvolvedores
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+  <table align="center">
+  <tr>
+    <td align="center">
+    <img  src="https://avatars.githubusercontent.com/u/93778308?v=4" style="width: 100px; border-radius: 5%">
+    <h4><b>Cristiane Damaceno</b></h4>
+      <a href="https://www.linkedin.com/in/cristiane-damaceno/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
+      <a href="https://github.com/cristianedamaceno" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"></a> 
+    <td align="center">
+    <img  src="https://avatars.githubusercontent.com/u/6810988?v=4" style="width: 100px; border-radius: 5%">
+    <h4><b>Iara Lima</b></h4>
+      <a href="https://www.linkedin.com/in/iara-dos-santos-949316193/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
+      <a href="https://github.com/IaraLima"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"></a> 
+    <td align="center">
+      <img  src="https://avatars.githubusercontent.com/u/87741743?s=400&u=971cdb250c7de25b47ea10f9b033c9fd45aba521&v=4" style="width: 100px; border-radius: 5%">
+    <h4><b>Erick Costa</b></h4>
+     <a href="https://www.linkedin.com/in/erick-pereira-12aa971b0/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
+      <a href="https://github.com/ErickPCosta" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"></a> 
+    <td align="center">
+    <img  src="https://avatars.githubusercontent.com/u/93782827?v=4" style="width: 100px; border-radius: 5%">
+       <h4><b>Jhonatan Siqueira</b></h4>
+      <a href="https://www.linkedin.com/in/jhonatan-nunes-de-siqueira-ba8a19157/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
+      <a href="https://github.com/jhonatannsiqueira" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"/></a> 
+   <td align="center">
+    <img  src="https://media-exp1.licdn.com/dms/image/C4D03AQGl9JEDDrStKQ/profile-displayphoto-shrink_800_800/0/1643827715543?e=1649289600&v=beta&t=-2E41v6u6s3PclAwhNR-19tXk7_qWerdtH4v-84rTrM" style="width: 100px; border-radius: 5%">
+    <h4><b>Vitor Crivelaro</b></h4>
+      <a href="https://www.linkedin.com/in/vitor-crivelaro-ab81bb91/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
+      <a href="https://github.com/vcrivelaro" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"></a> 
+     <td align="center">
+    <img  src="https://avatars.githubusercontent.com/u/94019341?v=4" style="width: 100px; border-radius: 5%">
+    <h4><b>Marcelo Borges</b></h4>
+      <a href="Linkedin.com/in/marcelo-b-571395185/" target="_blank"><img src="https://img.icons8.com/fluency/26/linkedin-circled.png" target="_blank"></a> 
+      <a href="https://github.com/Marceloux" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/889/889111.png" target="_blank"></a> 
+</table>
