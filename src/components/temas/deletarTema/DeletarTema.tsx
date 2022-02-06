@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {Box, Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './DeletarTema.css';
 import { useHistory, useParams } from 'react-router-dom';
 import { buscaId, deleteId } from '../../../services/Service';
@@ -8,73 +8,71 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 
-
 function DeletarTema() {
-    let history = useHistory();
-    const { id } = useParams<{id: string}>();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-      (state) => state.tokens
-    );
 
-    const [tema, setTema] = useState<Tema>()
+  let history = useHistory();
+  const { id } = useParams<{ id: string }>();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
 
-    useEffect(() => {
-        if (token == "") {
-          toast.error('Você precisa estar logado', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined,
-            });
-            history.push("/login")
-    
-        }
-    }, [token])
+  const [tema, setTema] = useState<Tema>()
 
-    useEffect(() =>{
-        if(id !== undefined){
-            findById(id)
-        }
-    }, [id])
+  useEffect(() => {
+    if (token == "") {
+      toast.error('Você precisa estar logado', {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+      });
+      history.push("/login")
 
-    async function findById(id: string) {
-        buscaId(`/temas/${id}`, setTema, {
-            headers: {
-              'Authorization': token
-            }
-          })
-        }
+    }
+  }, [token])
 
-        function sim() {
-            history.push('/temas')
-            deleteId(`/temas/${id}`, {
-              headers: {
-                'Authorization': token
-              }
-            });
-            toast.success('Tema deletado com sucesso', {
-              position: "top-right",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: false,
-              draggable: false,
-              theme: "colored",
-              progress: undefined,
-              });
-          }
-        
-          function nao() {
-            history.push('/temas')
-          }
-          
+  useEffect(() => {
+    if (id !== undefined) {
+      findById(id)
+    }
+  }, [id])
+
+  async function findById(id: string) {
+    buscaId(`/temas/${id}`, setTema, {
+      headers: {
+        'Authorization': token
+      }
+    })
+  }
+
+  function sim() {
+    history.push('/temas')
+    deleteId(`/temas/${id}`, {
+      headers: {
+        'Authorization': token
+      }
+    });
+    toast.success('Tema deletado com sucesso', {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+    });
+  }
+
+  function nao() {
+    history.push('/temas')
+  }
+
   return (
     <>
-       <Box m={2}>
+      <Box m={2}>
         <Card variant="outlined">
           <CardContent>
             <Box justifyContent="center">
@@ -94,7 +92,7 @@ function DeletarTema() {
                 </Button>
               </Box>
               <Box mx={2}>
-                <Button  onClick={nao} variant="contained" size='large' className='botao2' color="secondary">
+                <Button onClick={nao} variant="contained" size='large' className='botao2' color="secondary">
                   Não
                 </Button>
               </Box>

@@ -2,12 +2,12 @@ import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Container, Typography, TextField, Button, Grid, Box } from "@material-ui/core"
 import { useHistory, useParams } from 'react-router-dom'
 import './CadastroTemas.css';
-import useLocalStorage from 'react-use-localstorage';
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import ListarTemas from '../listarTemas/ListarTema';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from "react-toastify";
 
 function CadastroTema() {
 
@@ -24,7 +24,15 @@ function CadastroTema() {
 
 	useEffect(() => {
 		if (token == "") {
-			alert("Por favor, efetue o Login!!")
+			toast.error("Por favor, efetue o Login!!", {
+				position: "top-right",
+				autoClose: 1500,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: false,
+				draggable: false,
+				progress: undefined
+			});
 			history.push("/login")
 
 		}
@@ -63,14 +71,30 @@ function CadastroTema() {
 					'Authorization': token
 				}
 			})
-			alert('Tema ATUALIZADO com sucesso!!');
+			toast.success("Tema ATUALIZADO com sucesso!!", {
+				position: "top-right",
+				autoClose: 1500,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: false,
+				draggable: false,
+				progress: undefined
+			});
 		} else {
 			post(`/temas`, tema, setTema, {
 				headers: {
 					'Authorization': token
 				}
 			})
-			alert('Tema CADASTRADO com sucesso!!');
+			toast.success("Tema CADASTRADO com sucesso!!", {
+				position: "top-right",
+				autoClose: 1500,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: false,
+				draggable: false,
+				progress: undefined
+			});
 
 		}
 		back()
@@ -96,7 +120,7 @@ function CadastroTema() {
 			<Grid>
 				<Typography variant="h3" color="textSecondary" component="h1" align="center" className="fonteTitulo">Lista de Temas</Typography>
 				<Grid container xs={12} justifyContent='center' alignItems='center' >
-				<Box display="flex" flexWrap="wrap" justifyContent="center">
+					<Box display="flex" flexWrap="wrap" justifyContent="center">
 						<ListarTemas />
 					</Box>
 				</Grid>

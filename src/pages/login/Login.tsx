@@ -43,24 +43,23 @@ function Login() {
 
             toast.success('🦄 Usuário Logado!', {
                 position: "top-right",
-                autoClose: 2000,
+                autoClose: 1500,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                });
+            });
 
         }
         catch (error) {
             toast.error("Dados Inconsistentes. Erro ao Logar!!", {
                 position: "top-right",
-                autoClose: 2000,
+                autoClose: 1500,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: "colored",
                 progress: undefined
             });
 
@@ -72,11 +71,11 @@ function Login() {
             <Grid alignItems="center" xs={6}>
                 <Box paddingX={20}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center"  className="fonteTitulo" >Entrar</Typography>
+                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className="fonteTitulo" >Entrar</Typography>
                         <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="usuario" label="Usuário" variant="outlined" name="usuario" margin="normal" fullWidth />
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="Senha" variant="outlined" name="senha" margin="normal" type="password" fullWidth />
                         <Box marginTop={2} textAlign="center">
-                            <Button type="submit" variant="contained"  className="botao">
+                            <Button type="submit" variant="contained" className="botao">
                                 Logar
                             </Button>
                         </Box>

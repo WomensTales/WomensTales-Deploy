@@ -57,23 +57,21 @@ function CadastroUser() {
             cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
             toast.success("Usuário CADASTRADO com sucesso!!", {
                 position: "top-right",
-                autoClose: 2000,
+                autoClose: 1500,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: "colored",
                 progress: undefined
             });
         } else {
             toast.error("Dados Inconsistentes!! Verifique as Informações de Cadastro.", {
                 position: "top-right",
-                autoClose: 2000,
+                autoClose: 1500,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: "colored",
                 progress: undefined
             });
         }
@@ -98,7 +96,7 @@ function CadastroUser() {
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button type="submit" variant="contained"  className="botao2">
+                            <Button type="submit" variant="contained" className="botao2">
                                 Cadastrar
                             </Button>
                         </Box>

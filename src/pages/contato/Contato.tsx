@@ -4,6 +4,7 @@ import './Contato.css';
 import { Grid, Box, Typography, TextField, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 type Inputs = {
     nome: string,
@@ -16,7 +17,17 @@ function Contato() {
     function sendEmail(e: any): void {
 
         e.preventDefault();
-        emailjs.sendForm('GmailMessageWT', 'WomensTemplate', e.target, 'user_PaWt6qBcoiQoSKWf7JxZA').then((result) => { alert("Mensagem enviada com sucesso."); }, (error) => { alert(error.message) });
+        emailjs.sendForm('GmailMessageWT', 'WomensTemplate', e.target, 'user_PaWt6qBcoiQoSKWf7JxZA').then((result) => {
+            toast.success("E-mail enviado com sucesso!!", {
+                position: "top-right",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined
+            });
+        }, (error) => { alert(error.message) });
         e.target.reset();
     }
 
@@ -63,22 +74,22 @@ function Contato() {
 
                             <Box marginTop={2} textAlign="center">
 
-                                <Box  m={2}>
-                                <Button type="submit" variant="outlined" className="botao">
-                                    Enviar
-                                </Button>
+                                <Box m={2}>
+                                    <Button type="submit" variant="outlined" className="botao">
+                                        Enviar
+                                    </Button>
                                 </Box>
 
                                 <Box m={2}>
-                                <Link to="/home" className="text-decorator-none">
-                                    <Button variant="outlined" className="botao2">
-                                        Cancelar
-                                    </Button>
-                                </Link>
+                                    <Link to="/home" className="text-decorator-none">
+                                        <Button variant="outlined" className="botao2">
+                                            Cancelar
+                                        </Button>
+                                    </Link>
                                 </Box>
-                            
-                               
-                                
+
+
+
                             </Box>
                         </form>
                     </Box>

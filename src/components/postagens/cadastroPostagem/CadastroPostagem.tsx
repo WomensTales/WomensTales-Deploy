@@ -3,11 +3,11 @@ import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem,
 import './CadastroPostagem.css';
 import { useHistory, useParams } from 'react-router-dom';
 import Tema from '../../../models/Tema';
-import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from "react-toastify";
 
 function CadastroPostagem() {
 
@@ -16,11 +16,19 @@ function CadastroPostagem() {
 	const [temas, setTemas] = useState<Tema[]>([])
 	const token = useSelector<TokenState, TokenState["tokens"]>(
 		(state) => state.tokens
-	  );
+	);
 
 	useEffect(() => {
 		if (token == "") {
-			alert("Por favor, efetue o Login!!")
+			toast.error("Por favor, efetue o Login!!", {
+				position: "top-right",
+				autoClose: 1500,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: false,
+				draggable: false,
+				progress: undefined
+			});
 			history.push("/login")
 
 		}
@@ -89,14 +97,30 @@ function CadastroPostagem() {
 					'Authorization': token
 				}
 			})
-			alert('Postagem ATUALIZADA com sucesso!!');
+			toast.success("Postagem ATUALIZADA com sucesso!!", {
+				position: "top-right",
+				autoClose: 1500,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: false,
+				draggable: false,
+				progress: undefined
+			});
 		} else {
 			post(`/postagens`, postagem, setPostagem, {
 				headers: {
 					'Authorization': token
 				}
 			})
-			alert('Postagem CADASTRADA com sucesso!!');
+			toast.success("Postagem CADASTRADA com sucesso!!", {
+				position: "top-right",
+				autoClose: 1500,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: false,
+				draggable: false,
+				progress: undefined
+			});
 		}
 		back()
 

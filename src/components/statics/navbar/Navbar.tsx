@@ -20,12 +20,11 @@ function Navbar() {
         dispatch(addToken(''));
         toast.info('Usuário deslogado', {
             position: "top-right",
-            autoClose: 2000,
+            autoClose: 1500,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: false,
             draggable: false,
-            theme: "colored",
             progress: undefined,
         });
         history.push('/login')

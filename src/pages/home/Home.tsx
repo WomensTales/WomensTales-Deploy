@@ -19,12 +19,11 @@ function Home() {
         if (token == "") {
             toast.error("Por favor, efetue o Login!!", {
                 position: "top-right",
-                autoClose: 2000,
+                autoClose: 1500,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: "colored",
                 progress: undefined
             });
             history.push("/login")
@@ -48,8 +47,8 @@ function Home() {
                         </Link>
                     </Box>
                 </Grid>
-               <Grid item xs={6}  >
-                  <img src="https://i.imgur.com/A5DqVT4.png" alt="" width="auto" height="auto" />
+                <Grid item xs={6}  >
+                    <img src="https://i.imgur.com/A5DqVT4.png" alt="" width="auto" height="auto" />
                 </Grid>
                 <Grid xs={12} className='postagens'>
                     <TabPostagem />

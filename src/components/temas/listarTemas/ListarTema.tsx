@@ -3,22 +3,31 @@ import { Link } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import Tema from '../../../models/Tema';
 import './ListarTema.css';
-import useLocalStorage from 'react-use-localstorage';
 import { useHistory } from 'react-router-dom';
 import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from "react-toastify";
 
 function ListarTema() {
+
 	const [temas, setTemas] = useState<Tema[]>([])
 	const token = useSelector<TokenState, TokenState["tokens"]>(
 		(state) => state.tokens
-	  );
+	);
 	let history = useHistory();
 
 	useEffect(() => {
 		if (token == '') {
-			alert("Você precisa estar logado")
+			toast.error("Por favor, efetue o Login!!", {
+				position: "top-right",
+				autoClose: 1500,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: false,
+				draggable: false,
+				progress: undefined
+			});
 			history.push("/login")
 		}
 	}, [token])
@@ -56,11 +65,11 @@ function ListarTema() {
 
 									<Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
 										<Box mx={1}>
-											
+
 											<Button variant="contained" className="marginLeft botao" size='small'>
 												Editar
 											</Button>
-											
+
 										</Box>
 									</Link>
 									<Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
@@ -73,7 +82,7 @@ function ListarTema() {
 								</Box>
 							</CardActions>
 						</Card>
-						</Box>
+					</Box>
 				))
 			}
 		</>
