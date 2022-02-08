@@ -7,14 +7,14 @@ function Footer() {
 
     return (
         <>
-            <Grid container direction="row" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", backgroundColor: "#C77185"}}>
+            <Grid container direction="row" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", backgroundColor: "#C77185" }}>
                 <Box paddingLeft={7} className="box1">
                     <Box paddingTop={1}>
                         <Typography variant="subtitle2" align="left" style={{ color: "white" }} ></Typography>
                     </Box>
                     <Box>
                         <a target="_blank" className='text-decorator-none' href="https://womenstales.vercel.app/">
-                            <Typography variant="subtitle2" style={{ color: "white" }} align="center">© 2022 Copyright Women's Tales</Typography>
+                            <Typography variant="subtitle2" style={{ color: "white" }} align="center">© 2022 Copyright: Women's Tales</Typography>
                         </a>
                     </Box>
                 </Box>

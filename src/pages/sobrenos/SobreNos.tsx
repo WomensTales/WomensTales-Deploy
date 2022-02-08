@@ -28,15 +28,15 @@ function SobreNos() {
                                 </Box>
                                 <Box paddingTop={2}>
                                     <Typography className='espaco-letras'>
-                                     
-                                    Em 2015, a Assembleia Geral das Nações Unidas adotou a Agenda 2030 de Desenvolvimento Sustentável. 
-                                    Com 17 objetivos globais, os Estados-membros aprovaram um plano de ação para promover o 
-                                    desenvolvimento sustentável e a erradicação da pobreza. 
-                                    Entre esses objetivos, foi lançada a iniciativa global: "Por um planeta 50-50 em 2030: um passo decisivo pela igualdade de gênero”,
-                                    pensando nisso, a equipe de desenvolvimento, montada no bootcamp da Generation foi desafiada a realizar
-                                    um projeto que contribua com esta meta global. E de maneira conjuta nasceu o Women's Tales.
-                                     
-                                  
+
+                                        Em 2015, a Assembleia Geral das Nações Unidas adotou a Agenda 2030 de Desenvolvimento Sustentável.
+                                        Com 17 objetivos globais, os Estados-membros aprovaram um plano de ação para promover o
+                                        desenvolvimento sustentável e a erradicação da pobreza.
+                                        Entre esses objetivos, foi lançada a iniciativa global: "Por um planeta 50-50 em 2030: um passo decisivo pela igualdade de gênero”,
+                                        pensando nisso, a equipe de desenvolvimento, montada no bootcamp da Generation foi desafiada a realizar
+                                        um projeto que contribua com esta meta global. E de maneira conjuta nasceu o Women's Tales.
+
+
                                     </Typography>
                                 </Box>
                             </Box>
@@ -44,7 +44,7 @@ function SobreNos() {
                         <Grid item xs={6}>
                             <Box className='box-texto' paddingLeft={7} paddingRight={7}>
                                 <Box >
-                                    <Typography variant='h3' component='h3'  className="fonteTitulo"  align='center'>
+                                    <Typography variant='h3' component='h3' className="fonteTitulo" align='center'>
                                         Solução
                                     </Typography>
                                 </Box>
@@ -65,16 +65,16 @@ function SobreNos() {
                         <Grid item xs={6}>
                             <Box className='box-texto' paddingLeft={7} paddingRight={7}>
                                 <Box >
-                                    <Typography variant='h3' component='h3' align='center'  className="fonteTitulo" >
+                                    <Typography variant='h3' component='h3' align='center' className="fonteTitulo" >
                                         Objetivos
                                     </Typography>
                                 </Box>
                                 <Box paddingTop={2}>
                                     <Typography className='espaco-letras'>
                                         A rede social Women’s Tales é um ambiente seguro, acolhedor,
-                                         informativo, instrutivo e, principalmente, um espaço para desabafo,
-                                          um lugar onde efetivamente mulheres serão ouvidas, sejam compartilhando
-                                           suas conquistas ou angústias. 
+                                        informativo, instrutivo e, principalmente, um espaço para desabafo,
+                                        um lugar onde efetivamente mulheres serão ouvidas, sejam compartilhando
+                                        suas conquistas ou angústias.
                                         <br></br>
                                         <br></br>
                                         <br></br>
@@ -85,13 +85,13 @@ function SobreNos() {
                         <Grid item xs={6}>
                             <Box className='box-texto' paddingRight={7} paddingLeft={7}>
                                 <Box >
-                                    <Typography variant='h3' component='h3' align='center'  className="fonteTitulo" >
+                                    <Typography variant='h3' component='h3' align='center' className="fonteTitulo" >
                                         Mensagem da equipe
                                     </Typography>
                                 </Box>
                                 <Box paddingBottom={12} paddingTop={2}>
                                     <Typography className='espaco-letras'>
-                                        Quando olhamos apenas pra nós mesmos, parece que podemos fazer bem pouco umas pelas outras. 
+                                        Quando olhamos apenas pra nós mesmos, parece que podemos fazer bem pouco umas pelas outras.
                                         Esse "pouco" somado torna-se algo grandioso. Estamos aqui para conectar!
                                     </Typography>
                                 </Box>
@@ -103,8 +103,8 @@ function SobreNos() {
                 <Grid container justifyContent="center">
                     <Grid item xs={6} >
                         <Box paddingBottom={7} >
-                            <Typography variant='h3' component='h3' align='center'  className="fonteTitulo" >
-                                Squad 
+                            <Typography variant='h3' component='h3' align='center' className="fonteTitulo" >
+                                Squad
                             </Typography>
                         </Box>
                     </Grid>
@@ -116,7 +116,7 @@ function SobreNos() {
                             <img className='box-fotos' src="https://i.imgur.com/SPJr5de.png" alt="Dev Jhonatan" />
                         </Box>
                         <Box >
-                            <Typography variant='h5' component='h5'  className="fonteTitulo"  align='center'>
+                            <Typography variant='h5' component='h5' className="fonteTitulo" align='center'>
                                 Jhonatan Siqueira
                             </Typography>
                             <Typography align='center'>
@@ -141,13 +141,13 @@ function SobreNos() {
                             <img className='box-fotos' src="https://i.imgur.com/Hkge7qg.png" alt="Dev Erick" />
                         </Box>
                         <Box >
-                            <Typography variant='h5' component='h5' align='center'  className="fonteTitulo" >
+                            <Typography variant='h5' component='h5' align='center' className="fonteTitulo" >
                                 Erick Pereira
                             </Typography>
                             <Typography align='center'>
                                 Desenvolvedor Full Stack
                             </Typography>
-                            
+
                         </Box>
                         <Box display="flex" alignItems="center" justifyContent="center" className='box-icones' >
 
@@ -165,7 +165,7 @@ function SobreNos() {
                             <img className='box-fotos' src="https://i.imgur.com/D6O7fVJ.png" alt="Dev Cristiane" />
                         </Box>
                         <Box >
-                            <Typography variant='h5' component='h5' align='center'  className="fonteTitulo" >
+                            <Typography variant='h5' component='h5' align='center' className="fonteTitulo" >
                                 Cristiane Damaceno
                             </Typography>
                             <Typography align='center'>
@@ -191,7 +191,7 @@ function SobreNos() {
                             <img className='box-fotos' src="https://i.imgur.com/qyzAk2W.png" alt="Dev Iara" />
                         </Box>
                         <Box >
-                            <Typography variant='h5' component='h5' align='center'  className="fonteTitulo" >
+                            <Typography variant='h5' component='h5' align='center' className="fonteTitulo" >
                                 Iara dos Santos
                             </Typography>
                             <Typography align='center'>
@@ -217,7 +217,7 @@ function SobreNos() {
                             <img className='box-fotos' src="https://i.imgur.com/TMcdAhw.png" alt="Dev Vitor" />
                         </Box>
                         <Box >
-                            <Typography variant='h5' component='h5' align='center'  className="fonteTitulo" >
+                            <Typography variant='h5' component='h5' align='center' className="fonteTitulo" >
                                 Vitor Crivelaro
                             </Typography>
                             <Typography align='center'>
@@ -243,7 +243,7 @@ function SobreNos() {
                             <img className='box-fotos' src="https://i.imgur.com/9stATil.png" alt="Dev Marcelo" />
                         </Box>
                         <Box >
-                            <Typography variant='h5' component='h5' align='center'  className="fonteTitulo" >
+                            <Typography variant='h5' component='h5' align='center' className="fonteTitulo" >
                                 Marcelo Borges
                             </Typography>
                             <Typography align='center'>

@@ -4,19 +4,16 @@ import './DeletarPostagem.css';
 import Postagem from '../../../models/Postagem';
 import { useHistory, useParams } from 'react-router-dom';
 import { buscaId, deleteId } from '../../../services/Service';
-import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
-import { toast } from "react-toastify";
+import useLocalStorage from 'react-use-localstorage';
+import { toast } from 'react-toastify';
 
 function DeletarPostagem() {
 
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
-    );
-
+    const [token, setToken] = useLocalStorage('token');
     const [postagem, setPostagem] = useState<Postagem>()
+    const [idUser, setIdUser] = useLocalStorage('id');
 
     useEffect(() => {
         if (token == "") {
@@ -49,21 +46,34 @@ function DeletarPostagem() {
     }
 
     function sim() {
-        history.push('/postagens')
-        deleteId(`/postagens/${id}`, {
-            headers: {
-                'Authorization': token
-            }
-        });
-        toast.success("Postagem DELETADA com sucesso!!", {
-            position: "top-right",
-            autoClose: 1500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            progress: undefined
-        });
+
+        if (postagem?.usuario?.id == parseInt(idUser)) {
+            history.push('/postagens')
+            deleteId(`/postagens/${id}`, {
+                headers: {
+                    'Authorization': token
+                }
+            });
+            toast.success("Postagem DELETADA com sucesso!!", {
+                position: "top-right",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined
+            });
+        } else {
+            toast.error("Você não pode DELETAR esta Postagem!!", {
+                position: "top-right",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined
+            });
+        }
     }
 
     function nao() {

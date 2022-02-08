@@ -4,16 +4,13 @@ import './Home.css';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
 import { Link, useHistory } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { TokenState } from '../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import useLocalStorage from 'react-use-localstorage';
 
 function Home() {
 
     let history = useHistory();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
-    );
+    const [token, setToken] = useLocalStorage('token');
 
     useEffect(() => {
         if (token == "") {

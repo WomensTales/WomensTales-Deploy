@@ -4,18 +4,15 @@ import { useHistory, useParams } from 'react-router-dom'
 import './CadastroTemas.css';
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
-import { useSelector } from 'react-redux';
 import ListarTemas from '../listarTemas/ListarTema';
-import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from "react-toastify";
+import useLocalStorage from 'react-use-localstorage';
 
 function CadastroTema() {
 
 	let history = useHistory();
 	const { id } = useParams<{ id: string }>();
-	const token = useSelector<TokenState, TokenState["tokens"]>(
-		(state) => state.tokens
-	);
+	const [token, setToken] = useLocalStorage('token');
 	const [tema, setTema] = useState<Tema>({
 		id: 0,
 		titulo: '',
@@ -107,7 +104,6 @@ function CadastroTema() {
 
 	return (
 		<Container maxWidth="sm" className="topo">
-
 			<Grid >
 				<form onSubmit={onSubmit}>
 					<Typography variant="h3" color="textSecondary" component="h1" align="center" className="fonteTitulo" >Novo tema</Typography>
@@ -124,9 +120,6 @@ function CadastroTema() {
 						<ListarTemas />
 					</Box>
 				</Grid>
-
-
-
 			</Grid>
 		</Container>
 	);

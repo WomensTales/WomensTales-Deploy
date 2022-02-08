@@ -49,13 +49,13 @@ function Contato() {
                             <Typography variant="h4" gutterBottom color="textPrimary" className="fonteTitulo" component="h3" align="center">Contato</Typography>
                             <TextField id="nome" label="Nome" variant="outlined" margin="normal" fullWidth {...register("nome", { required: true, maxLength: 30, minLength: 3 })} />
                             {errors.nome?.type === 'required' && <span className="msgError"> "O Nome é um atributo obrigatório!"</span>}
-                            {errors.nome && errors.nome.type === "maxLength" && <span className="msgError">O tamanho para o nome foi excedido! Use no máximo 30 caracteres.</span>}
-                            {errors.nome && errors.nome.type === "minLength" && <span className="msgError">O tamanho para o nome está curto! Use mais de 3 caracteres.</span>}
+                            {errors.nome && errors.nome.type === "maxLength" && <span className="msgError">O tamanho para o Nome foi excedido! Use no máximo 30 caracteres.</span>}
+                            {errors.nome && errors.nome.type === "minLength" && <span className="msgError">O tamanho para o Nome está curto! Use mais de 3 caracteres.</span>}
 
-                            <TextField id="nome" type="email" label="Email" variant="outlined" margin="normal" fullWidth {...register("email", { required: true, maxLength: 100, minLength: 10, pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: "Endereço de email inválido!" } })} />
+                            <TextField id="nome" type="email" label="E-mail" variant="outlined" margin="normal" fullWidth {...register("email", { required: true, maxLength: 100, minLength: 10, pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: "Endereço de email inválido!" } })} />
                             {errors.email?.type === 'required' && <span className="msgError">O email é um atributo obrigatório!</span>}
-                            {errors.email && errors.email.type === "maxLength" && <span className="msgError">O tamanho para o email foi excedido! Use no máximo 100 caracteres.</span>}
-                            {errors.email && errors.email.type === "minLength" && <span className="msgError">O tamanho para o email está curto! Use mais de 10 caracteres.</span>}
+                            {errors.email && errors.email.type === "maxLength" && <span className="msgError">O tamanho para o E-mail foi excedido! Use no máximo 100 caracteres.</span>}
+                            {errors.email && errors.email.type === "minLength" && <span className="msgError">O tamanho para o E-mail está curto! Use mais de 10 caracteres.</span>}
 
                             <TextField
                                 id="outlined-multiline-flexible"

@@ -3,20 +3,19 @@ import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem,
 import './CadastroPostagem.css';
 import { useHistory, useParams } from 'react-router-dom';
 import Tema from '../../../models/Tema';
+import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
+import User from '../../../models/User';
 import { busca, buscaId, post, put } from '../../../services/Service';
-import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 
 function CadastroPostagem() {
 
 	let history = useHistory();
 	const { id } = useParams<{ id: string }>();
 	const [temas, setTemas] = useState<Tema[]>([])
-	const token = useSelector<TokenState, TokenState["tokens"]>(
-		(state) => state.tokens
-	);
+	const [token, setToken] = useLocalStorage('token');
+	const [idUser, setIdUser] = useLocalStorage('id');
 
 	useEffect(() => {
 		if (token == "") {
@@ -34,24 +33,36 @@ function CadastroPostagem() {
 		}
 	}, [token])
 
+	const [user, setUser] = useState<User>(
+		{
+			id: Number.parseInt(idUser),
+			nome: "",
+			profissao: "",
+			foto: "",
+			usuario: "",
+			senha: ""
+		})
+
 	const [tema, setTema] = useState<Tema>(
 		{
 			id: 0,
 			titulo: '',
 			status: false
-
 		})
+
 	const [postagem, setPostagem] = useState<Postagem>({
 		id: 0,
 		titulo: '',
 		texto: '',
-		tema: null
+		tema: null,
+		usuario: null
 	})
 
 	useEffect(() => {
 		setPostagem({
 			...postagem,
-			tema: tema
+			tema: tema,
+			usuario: user
 		})
 	}, [tema])
 
@@ -106,6 +117,7 @@ function CadastroPostagem() {
 				draggable: false,
 				progress: undefined
 			});
+
 		} else {
 			post(`/postagens`, postagem, setPostagem, {
 				headers: {

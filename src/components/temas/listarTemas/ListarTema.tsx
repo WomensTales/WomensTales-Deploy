@@ -5,16 +5,13 @@ import Tema from '../../../models/Tema';
 import './ListarTema.css';
 import { useHistory } from 'react-router-dom';
 import { busca } from '../../../services/Service';
-import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from "react-toastify";
+import useLocalStorage from 'react-use-localstorage';
 
 function ListarTema() {
 
 	const [temas, setTemas] = useState<Tema[]>([])
-	const token = useSelector<TokenState, TokenState["tokens"]>(
-		(state) => state.tokens
-	);
+	const [token, setToken] = useLocalStorage('token');
 	let history = useHistory();
 
 	useEffect(() => {
@@ -40,7 +37,6 @@ function ListarTema() {
 			}
 		})
 	}
-
 
 	useEffect(() => {
 		getTema()
@@ -75,7 +71,7 @@ function ListarTema() {
 									<Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
 										<Box mx={1}>
 											<Button variant="contained" size='small' className="botao2">
-												deletar
+												Deletar
 											</Button>
 										</Box>
 									</Link>

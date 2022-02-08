@@ -2,23 +2,18 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Box } from '@material-ui/core'
 import { Link, useHistory } from 'react-router-dom';
 import './Navbar.css';
-import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
-import { useDispatch } from "react-redux";
-import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
+import MeetingRoomOutlinedIcon from '@material-ui/icons/MeetingRoomOutlined';
+import useLocalStorage from 'react-use-localstorage';
 
 function Navbar() {
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
-    );
+    const [token, setToken] = useLocalStorage('token');
     let history = useHistory();
-    const dispatch = useDispatch();
 
     function goLogout() {
-        dispatch(addToken(''));
-        toast.info('Usuário deslogado', {
+        setToken('')
+        toast.info('Usuário Deslogado!!', {
             position: "top-right",
             autoClose: 1500,
             hideProgressBar: false,
@@ -29,7 +24,6 @@ function Navbar() {
         });
         history.push('/login')
     }
-
 
     return (
         <>
@@ -45,22 +39,22 @@ function Navbar() {
                             <Box display="flex" justifyContent="start">
                                 <Link to="/home" className="text-decorator-none cursor">
                                     <Box mx={1}>
-                                        <Typography variant="h6" color="inherit">
+                                        <Typography variant="h6" color="inherit" className="fonteNavbar">
                                             Women's Tales
                                         </Typography>
                                     </Box>
                                 </Link>
                                 <Link to="/sobre-nos" className="text-decorator-none cursor">
                                     <Box mx={1}>
-                                        <Typography variant="h6" color="inherit">
-                                            Sobre
+                                        <Typography variant="h6" color="inherit" className="fonteNavbar">
+                                            Sobre-Nós
                                         </Typography>
                                     </Box>
 
                                 </Link>
                                 <Link to="/contato" className="text-decorator-none cursor">
                                     <Box mx={1}>
-                                        <Typography variant="h6" color="inherit">
+                                        <Typography variant="h6" color="inherit" className="fonteNavbar">
                                             Contato
                                         </Typography>
                                     </Box>
@@ -68,7 +62,7 @@ function Navbar() {
 
                                 <Link to="/formularioTema" className="text-decorator-none cursor">
                                     <Box mx={1}>
-                                        <Typography variant="h6" color="inherit">
+                                        <Typography variant="h6" color="inherit" className="fonteNavbar">
                                             Temas
                                         </Typography>
                                     </Box>
@@ -77,8 +71,8 @@ function Navbar() {
                         </Box>
 
                         <Box mx={1} style={{ cursor: "pointer" }} onClick={goLogout}>
-                            <Typography variant="h6" color="inherit">
-                                Logout
+                            <Typography variant="h6" color="inherit" className="fonteNavbar">
+                                <MeetingRoomOutlinedIcon style={{ fontSize: 30, color: "white" }} />
                             </Typography>
                         </Box>
                     </Box>
